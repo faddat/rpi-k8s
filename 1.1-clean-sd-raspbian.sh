@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "Runnning fdisk -l to list your disks"
-fdisk-l
+fdisk -l
 echo "Which disk do you want this to run against?  Remember, it'll get wiped!"
 read hdd
 hdd="/dev/sdb"
