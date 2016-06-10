@@ -35,7 +35,7 @@ mkdir -p /root/rpi/root
 kpartx /dev/sdb
 mount "$(echo $hdd)2" /root/rpi/root
 
-if [! -f 2016-03-18-raspbian-jessie-lite.zip]; then
+if [ -f 2016-03-18-raspbian-jessie-lite.zip ] then
   unzip 2016-03-18-raspbian-jessie-lite.zip -d /root/rpi/root
 else
   wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2016-03-18/2016-03-18-raspbian-jessie-lite.zip
