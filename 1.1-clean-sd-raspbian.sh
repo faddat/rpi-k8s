@@ -27,12 +27,12 @@ p
 w" | fdisk $hdd
 mkfs.vfat "$(echo $hdd)1"
 mkdir -p /root/rpi/boot
-kpart
+kpartx /dev/sdb
 mount "$(echo $hdd)1" /root/rpi/boot
 
 mkfs.ext4 "$(echo $hdd)2"
 mkdir -p /root/rpi/root
-kpart
+kpartx /dev/sdb
 mount "$(echo $hdd)2" /root/rpi/root
 
 if [! -f 2016-03-18-raspbian-jessie-lite.zip]; then
